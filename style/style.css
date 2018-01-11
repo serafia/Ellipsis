@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body {
+	font-family: 'Lato', sans-serif;
+}
+.myborder {
+	border: 2px solid #000;
+	margin: 0 100px;
+	position: relative;
+}
+.myborder h2 {
+	font-size: 2rem;
+	letter-spacing: 6px;
+	font-weight: 600;
+	display: inline-block;
+	width: 400px;
+	background-color: #fff; 
+	position: absolute;
+	top: -25px;
+	right: 250px;
+	margin-bottom: 0;
+}
+.myborder p {
+	opacity: .9;
+	padding: 70px 0;
+}
+
+
+.container {
+	padding: 100px 15px;
+}
+/* jumbotron */
+.jumbotron {
+	background-image: url('../img/jumbotron.png');
+	background-position: center bottom;
+	height: 100vh;
+	margin-bottom: 0;
+}
+.jumbotron h1 {
+	margin: 75px 0 40px 0;
+	font-size: 3.3rem;
+	letter-spacing: 9px;
+	font-weight: 600;
+}
+.jumbotron p {
+	line-height: 30px;
+	letter-spacing: 1px;
+	font-weight: 400;
+	font-size: 15px;
+}
+.scroll-container {
+	padding: 110px 15px;
+}
+
+/* about */
+#about {
+	margin: 60px 0 50px;
+}
+
+/* service */
+#services {
+	padding-top: 20px;
+	background-image: url('../img/service.png');
+	background-position: center;
+}
+#services .myborder {
+	border-color: #fff;
+	border-top: none;
+}
+#services .myborder h2 {
+	background: inherit;
+	width: 906px;
+	display: flex;
+	justify-content: center;
+	right: 0;
+}
+#services .myborder h2:before,
+#services .myborder h2:after {
+	border: 1px solid #fff;
+	width: 250px;
+}
