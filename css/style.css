@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+body {
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden; }
+
+.myborder {
+  border: 2px solid #000;
+  margin: 0 100px;
+  position: relative; }
+  .myborder h2 {
+    font-size: 2rem;
+    letter-spacing: 6px;
+    font-weight: 600;
+    display: inline-block;
+    width: 400px;
+    background-color: #fff;
+    position: absolute;
+    top: -20px;
+    right: 250px;
+    margin-bottom: 0; }
+  .myborder p {
+    opacity: .9;
+    padding: 70px 0 50px;
+    font-weight: 300;
+    margin: 0; }
+
+.container {
+  padding: 100px 15px; }
+
+/* jumbotron */
+.jumbotron {
+  background-image: url("../img/jumbotron.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin-bottom: 0;
+  padding-top: 155px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .jumbotron h1 {
+    margin: 75px 0 40px 0;
+    font-size: 3.3rem;
+    letter-spacing: 9px;
+    font-weight: 600; }
+  .jumbotron p {
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 15px; }
+  .jumbotron .scroll-container {
+    padding: 50px 15px; }
+
+/* about */
+#about {
+  margin: 60px 0 50px; }
+
+/* service */
+#services {
+  padding-top: 20px;
+  background: url("../img/service.png") center/cover;
+  background-repeat: no-repeat; }
+  #services .myborder {
+    border-color: #fff;
+    border-top: none; }
+    #services .myborder h2 {
+      background: inherit;
+      width: 906px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      right: 0; }
+    #services .myborder h2:before,
+    #services .myborder h2:after {
+      content: "";
+      border: 1px solid #fff;
+      width: 250px;
+      height: 0;
+      position: absolute;
+      bottom: 16px; }
+    #services .myborder h2:before {
+      left: 0; }
+    #services .myborder h2:after {
+      right: 0; }
+    #services .myborder p {
+      padding-bottom: 53px; }
+
+/* what we do */
+#whatWeDo .img-1 {
+  padding-top: 70px; }
+#whatWeDo h3 {
+  padding: 30px 0;
+  margin: 0;
+  font-size: 19px;
+  letter-spacing: 2px;
+  font-weight: 700; }
+#whatWeDo p {
+  padding: 0;
+  padding-bottom: 90px;
+  font-size: 15px; }
+
+/* gallery */
+#gallery [class*="col-"] {
+  position: relative;
+  padding: 0; }
+  #gallery [class*="col-"] img {
+    padding: 5px;
+    display: inline-block;
+    width: 100%;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  #gallery [class*="col-"] .topic {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin: 0; }
+
+/* contact Us */
+#contactUs .container {
+  padding-top: 150px;
+  padding-bottom: 0; }
+  #contactUs .container p {
+    padding-bottom: 40px; }
+  #contactUs .container .mybtn {
+    width: 400px;
+    height: 55px;
+    margin-bottom: 50px;
+    border-radius: 0;
+    letter-spacing: 2px;
+    background-color: #39393a;
+    border: none;
+    color: #fff;
+    transition: .3s; }
+  #contactUs .container .mybtn:hover {
+    background-color: #000; }
+
+/* footer */
+footer .container {
+  padding: 60px 15px; }
+  footer .container p {
+    font-size: 15px; }
+
+/* media quaries */
+@media (max-width: 767px) {
+  .myborder {
+    width: 290px; }
+    .myborder h2 {
+      width: 180px;
+      font-size: 20px;
+      left: 53px; }
+
+  /* jumbotron */
+  .jumbotron {
+    padding-top: 90px; }
+    .jumbotron .container {
+      padding: 15px 15px; }
+      .jumbotron .container h1 {
+        font-size: 30px;
+        margin: 60px 0 35px; }
+      .jumbotron .container p {
+        padding-right: 20px;
+        padding-left: 20px;
+        margin: 0; }
+    .jumbotron .scroll-container {
+      padding-top: 0; }
+      .jumbotron .scroll-container .fa {
+        margin-bottom: 10px; }
+
+  /* about */
+  #about .myborder h2 {
+    top: -15px; }
+
+  /* service */
+  #services .myborder h2 {
+    width: 286px;
+    top: -13px;
+    left: 0;
+    text-align: center; }
+  #services .myborder h2:before,
+  #services .myborder h2:after {
+    width: 53px;
+    bottom: 9px; }
+
+  /* what we do */
+  #whatWeDo h2 {
+    top: -24px; }
+  #whatWeDo p {
+    padding-right: 25px;
+    padding-left: 25px;
+    font-size: 16px;
+    line-height: 30px; }
+
+  /* gallery */
+  #gallery [class*="col-"] img {
+    padding: 5px 10px; }
+  #gallery [class*="col-"] .topic {
+    font-size: 23px; }
+
+  /* contact us*/
+  #contactUs .container h2 {
+    top: -24px; }
+  #contactUs .container .mybtn {
+    width: 200px;
+    height: 45px; } }
+@media (min-width: 768px) and (max-width: 1200px) {
+  .myborder {
+    width: 670px; }
+    .myborder h2 {
+      width: 350px;
+      font-size: 25px;
+      left: 158px;
+      top: -18px; }
+    .myborder p {
+      font-size: 20px;
+      line-height: 35px;
+      font-weight: 400; }
+
+  /* jumbotron */
+  .jumbotron .container p {
+    font-size: 19px; }
+  .jumbotron .scroll-container {
+    padding-top: 80px; }
+
+  /* what we do */
+  #whatWeDo h3 {
+    font-size: 23px; }
+  #whatWeDo p {
+    padding-right: 25px;
+    padding-left: 25px;
+    font-size: 20px;
+    line-height: 35px;
+    font-weight: 400; }
+
+  /* service */
+  #services .myborder h2 {
+    width: 666px;
+    top: -16px;
+    left: 0; }
+  #services .myborder h2:before,
+  #services .myborder h2:after {
+    width: 158px;
+    bottom: 12px; }
+
+  /* contact us */
+  #contactUs .container .mybtn {
+    width: 350px; } }
+@media (max-width: 1200px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+  br {
+    display: none; }
+
+  .myborder {
+    margin: 0; }
+    .myborder p {
+      padding-right: 25px;
+      padding-left: 25px;
+      line-height: 30px; }
+
+  /* jumbotron */
+  .jumbotron {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .jumbotron .container {
+      display: block; }
+    .jumbotron .scroll-container .fa {
+      font-size: 50px;
+      color: #fff; } }
+@media (min-width: 993px) and (max-width: 1200px) {
+  .myborder {
+    width: 800px; }
+    .myborder h2 {
+      width: 400px;
+      font-size: 40px;
+      left: 198px;
+      top: -28px; }
+    .myborder p {
+      font-size: 25px;
+      padding-right: 35px;
+      padding-left: 35px;
+      line-height: 35px; }
+
+  /* jumbotron */
+  .jumbotron .container {
+    padding-top: 250px; }
+    .jumbotron .container img {
+      width: 70px;
+      height: 74px; }
+    .jumbotron .container h1 {
+      padding-right: 80px;
+      padding-left: 80px;
+      font-size: 56px; }
+    .jumbotron .container p {
+      padding-right: 80px;
+      padding-left: 80px;
+      font-size: 22px;
+      line-height: 30px; }
+    .jumbotron .container .scroll-container {
+      padding-top: 250px; }
+      .jumbotron .container .scroll-container .fa {
+        font-size: 80px; }
+
+  /* what we do */
+  #whatWeDo h3 {
+    font-size: 31px; }
+  #whatWeDo p {
+    padding-right: 35px;
+    padding-left: 35px;
+    font-size: 27px;
+    line-height: 35px;
+    font-weight: 400; }
+
+  /* service */
+  #services .myborder h2 {
+    width: 796px;
+    top: -20px;
+    left: 0; }
+  #services .myborder h2:before,
+  #services .myborder h2:after {
+    width: 198px;
+    bottom: 26px; }
+
+  /* contact us */
+  #contactUs .container .mybtn {
+    width: 400px; } }
