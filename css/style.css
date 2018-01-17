@@ -159,7 +159,7 @@ footer .container {
 
   /* jumbotron */
   .jumbotron {
-    padding-top: 90px; }
+    padding: 20px 0; }
     .jumbotron .container {
       padding: 15px 15px; }
       .jumbotron .container h1 {
@@ -209,7 +209,12 @@ footer .container {
     top: -24px; }
   #contactUs .container .mybtn {
     width: 200px;
-    height: 45px; } }
+    height: 45px; }
+
+  /* footer */
+  footer img {
+    margin-right: 0;
+    margin-left: 10px; } }
 @media (min-width: 768px) and (max-width: 1200px) {
   .myborder {
     width: 670px; }
