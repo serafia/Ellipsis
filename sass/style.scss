@@ -208,7 +208,7 @@ footer {
 	/* jumbotron */
 	
 	.jumbotron {
-		padding-top: 90px;
+		padding: 20px 0;
 		.container {
 			padding: 15px 15px;
 			h1 {
@@ -299,6 +299,14 @@ footer {
 			}
 		}
 		
+	}
+
+	/* footer */
+	footer {
+		img {
+			margin-right: 0;
+			margin-left: 10px;
+		}
 	}
 }
 @media(min-width:768px) and (max-width: 1200px) {
