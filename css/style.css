@@ -27,6 +27,33 @@ body {
 .container {
   padding: 100px 15px; }
 
+.btn-up {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  text-align: center;
+  border: 1px solid #39393a;
+  background-color: #39393a;
+  color: #fff;
+  font-size: 20px;
+  padding-top: 3px;
+  opacity: 1;
+  box-shadow: 2px 2px 5px #888;
+  transition: .3s;
+  animation: myanim3 1s 1; }
+
+.btn-up:hover {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none; }
+
+@keyframes myanim3 {
+  from {
+    bottom: 0; }
+  to {
+    bottom: 50px; } }
 /* jumbotron */
 .jumbotron {
   background-image: url("../img/jumbotron.png");
@@ -36,9 +63,7 @@ body {
   height: 100vh;
   margin-bottom: 0;
   padding-top: 155px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  justify-content: space-between; }
   .jumbotron h1 {
     margin: 75px 0 40px 0;
     font-size: 3.3rem;
@@ -67,12 +92,8 @@ body {
     #services .myborder h2 {
       background: inherit;
       width: 906px;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
+      justify-content: center;
       right: 0; }
     #services .myborder h2:before,
     #services .myborder h2:after {
@@ -104,25 +125,58 @@ body {
   font-size: 15px; }
 
 /* gallery */
-#gallery [class*="col-"] {
-  position: relative;
-  padding: 0; }
-  #gallery [class*="col-"] img {
-    padding: 5px;
-    display: inline-block;
-    width: 100%;
+#gallery .layers {
+  min-height: 260px; }
+  #gallery .layers [class*="layer"] {
     height: 250px;
-    -o-object-fit: cover;
-       object-fit: cover; }
-  #gallery [class*="col-"] .topic {
-    position: absolute;
-    bottom: 40px;
-    left: 40px;
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: 5px;
-    margin: 0; }
+    margin: 5px;
+    display: inline-flex;
+    align-items: flex-end;
+    transition-duration: 2s; }
+    #gallery .layers [class*="layer"] .topic {
+      position: relative;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      margin-left: 40px;
+      margin-bottom: 30px;
+      margin-right: 40px;
+      animation: myanim1 2s;
+      animation-fill-mode: forwards; }
+  #gallery .layers .layer1 {
+    background: url("../img/Layer1.png") center/cover;
+    flex: 1; }
+  #gallery .layers .layer2 {
+    background: url("../img/Layer2.png") center/cover;
+    flex: 2; }
+  #gallery .layers .layer3 {
+    background: url("../img/Layer3.png") center/cover;
+    flex: 1; }
+  #gallery .layers .layer4 {
+    background: url("../img/Layer4.png") center/cover;
+    flex: 1; }
+  #gallery .layers .layer5 {
+    background: url("../img/Layer5.png") center/cover;
+    flex: 2; }
+  #gallery .layers .layer6 {
+    background: url("../img/Layer2.png") center/cover;
+    flex: 1; }
+  #gallery .layers [class*="layer"]:hover .topic {
+    animation: myanim0 2s;
+    animation-fill-mode: forwards; }
+  #gallery .layers [class*="layer"]:hover {
+    flex: 3; }
 
+@keyframes myanim0 {
+  from {
+    bottom: 0; }
+  to {
+    bottom: 150px; } }
+@keyframes myanim1 {
+  from {
+    bottom: 150px; }
+  to {
+    bottom: 0; } }
 /* contact Us */
 #contactUs .container {
   padding-top: 150px;
@@ -157,6 +211,16 @@ footer .container {
       font-size: 20px;
       left: 53px; }
 
+  .btn-up {
+    right: 15px;
+    bottom: 25px;
+    animation: myanim4 1s 1; }
+
+  @keyframes myanim4 {
+    from {
+      bottom: 0; }
+    to {
+      bottom: 25px; } }
   /* jumbotron */
   .jumbotron {
     padding: 20px 0; }
@@ -199,10 +263,11 @@ footer .container {
     line-height: 30px; }
 
   /* gallery */
-  #gallery [class*="col-"] img {
-    padding: 5px 10px; }
-  #gallery [class*="col-"] .topic {
-    font-size: 23px; }
+  #gallery .layers [class*="layer"] {
+    width: 100%;
+    margin: 5px 15px; }
+    #gallery .layers [class*="layer"] .topic {
+      font-size: 23px; }
 
   /* contact us*/
   #contactUs .container h2 {
@@ -227,6 +292,12 @@ footer .container {
       font-size: 20px;
       line-height: 35px;
       font-weight: 400; }
+
+  .btn-up {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    right: 25px; }
 
   /* jumbotron */
   .jumbotron .container p {
@@ -254,17 +325,21 @@ footer .container {
     width: 158px;
     bottom: 12px; }
 
+  /* gallery */
+  #gallery .layers [class*="layer"] {
+    width: 46%; }
+  #gallery .layers .layer1, #gallery .layers .layer3, #gallery .layers .layer5 {
+    margin-left: 15px; }
+  #gallery .layers .layer2, #gallery .layers .layer4, #gallery .layers .layer6 {
+    margin-right: 15px; }
+
   /* contact us */
   #contactUs .container .mybtn {
     width: 350px; } }
 @media (max-width: 1200px) {
   .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+    justify-content: center; }
 
   br {
     display: none; }
@@ -278,14 +353,19 @@ footer .container {
 
   /* jumbotron */
   .jumbotron {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+    justify-content: center; }
     .jumbotron .container {
       display: block; }
     .jumbotron .scroll-container .fa {
+      position: relative;
       font-size: 50px;
-      color: #fff; } }
+      color: #fff;
+      animation: myanim2 1.5s infinite; } }
+@keyframes myanim2 {
+  from {
+    top: 0; }
+  to {
+    top: 15px; } }
 @media (min-width: 993px) and (max-width: 1200px) {
   .myborder {
     width: 800px; }
@@ -299,6 +379,13 @@ footer .container {
       padding-right: 35px;
       padding-left: 35px;
       line-height: 35px; }
+
+  .btn-up {
+    width: 70px;
+    height: 70px;
+    font-size: 35px;
+    right: 43px;
+    padding-top: 5px; }
 
   /* jumbotron */
   .jumbotron .container {
@@ -342,4 +429,7 @@ footer .container {
 
   /* contact us */
   #contactUs .container .mybtn {
-    width: 400px; } }
+    width: 400px; }
+
+  footer .container p {
+    font-size: 20px; } }
