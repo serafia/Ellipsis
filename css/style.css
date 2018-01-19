@@ -144,12 +144,29 @@ body {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  transition-duration: 2s; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  transition-duration: 2s;
+  min-width: 305px; }
   #gallery .layers [class*="layer"] .topic {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: relative;
+    bottom: 0;
+    width: 450px;
     font-size: 32px;
     font-weight: 700;
     letter-spacing: 5px;
@@ -160,6 +177,15 @@ body {
             animation: myanim1 2s;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards; }
+    #gallery .layers [class*="layer"] .topic .gallery-text {
+      opacity: 0;
+      display: none;
+      font-size: 16px;
+      font-weight: 400;
+      position: relative;
+      margin-top: 10px;
+      letter-spacing: 2px;
+      text-transform: none; }
 #gallery .layers .layer1 {
   background: url("../img/Layer1.png") center/cover;
   -webkit-box-flex: 1;
@@ -199,18 +225,28 @@ body {
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3; }
+#gallery .layers [class*="layer"]:hover .topic .gallery-text {
+  display: inline-block;
+  -webkit-animation: myanim4 2s;
+          animation: myanim4 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
 
 @-webkit-keyframes myanim0 {
   from {
-    bottom: 0; }
+    bottom: -90px; }
   to {
-    bottom: 150px; } }
+    bottom: 60px;
+    margin-bottom: 10px; } }
 
 @keyframes myanim0 {
   from {
-    bottom: 0; }
+    bottom: -90px; }
   to {
-    bottom: 150px; } }
+    bottom: 60px;
+    margin-bottom: 10px; } }
 @-webkit-keyframes myanim1 {
   from {
     bottom: 150px; }
@@ -220,6 +256,20 @@ body {
   from {
     bottom: 150px; }
   to {
+    bottom: 0; } }
+@-webkit-keyframes myanim4 {
+  from {
+    opacity: 0;
+    bottom: -10px; }
+  to {
+    opacity: 1;
+    bottom: 0; } }
+@keyframes myanim4 {
+  from {
+    opacity: 0;
+    bottom: -10px; }
+  to {
+    opacity: 1;
     bottom: 0; } }
 /* contact Us */
 #contactUs .container {
