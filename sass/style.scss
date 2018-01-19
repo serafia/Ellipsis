@@ -167,10 +167,17 @@ body {
 			height: 250px;
 			margin: 5px;
 			display: inline-flex;
-			align-items: flex-end;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-end;
 			transition-duration: 2s;
+			min-width: 305px;
 			.topic {
+				display: flex;
+				flex-direction: column;
 				position: relative;
+				bottom: 0;
+				width: 450px;
 				font-size: 32px;
 				font-weight: 700;
 				letter-spacing: 5px;
@@ -179,7 +186,19 @@ body {
 				margin-right: 40px;
 				animation: myanim1 2s;
 				animation-fill-mode: forwards;
+				.gallery-text {
+					opacity: 0;
+					display: none;
+					font-size: 16px;
+					font-weight: 400;
+					position: relative;
+					margin-top: 10px;
+					letter-spacing: 2px;
+					text-transform: none;
+				}
 			}
+			
+			
 		}
 		.layer1 {
 			background: url('../img/Layer1.png') center/cover;
@@ -211,16 +230,26 @@ body {
 		}	
 		[class*="layer"]:hover{
 			flex: 3;
-		}		
+		}	
+		[class*="layer"]:hover .topic .gallery-text {
+			display: inline-block;
+			animation: myanim4 2s;
+			animation-fill-mode: forwards;
+			animation-delay: 1s;
+		}	
 	}
 }
 @keyframes myanim0 {
-	from { bottom: 0; }
-	to { bottom: 150px; }
+	from { bottom: -90px; }
+	to { bottom: 60px; margin-bottom: 10px; }
 }
 @keyframes myanim1 {
-	from { bottom: 150px; }
+	from { bottom: 150px;}
 	to { bottom: 0; }
+}
+@keyframes myanim4 {
+	from { opacity: 0; bottom: -10px; }
+	to { opacity: 1; bottom: 0;}
 }
 
 /* contact Us */
