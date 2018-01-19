@@ -42,12 +42,19 @@ body {
   opacity: 1;
   box-shadow: 2px 2px 5px #888;
   transition: .3s;
-  animation: myanim3 1s 1; }
+  -webkit-animation: myanim3 1s 1;
+          animation: myanim3 1s 1; }
 
 .btn-up:hover {
   background-color: #000;
   color: #fff;
   text-decoration: none; }
+
+@-webkit-keyframes myanim3 {
+  from {
+    bottom: 0; }
+  to {
+    bottom: 50px; } }
 
 @keyframes myanim3 {
   from {
@@ -63,7 +70,9 @@ body {
   height: 100vh;
   margin-bottom: 0;
   padding-top: 155px;
-  justify-content: space-between; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   .jumbotron h1 {
     margin: 75px 0 40px 0;
     font-size: 3.3rem;
@@ -92,8 +101,12 @@ body {
     #services .myborder h2 {
       background: inherit;
       width: 906px;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       right: 0; }
     #services .myborder h2:before,
     #services .myborder h2:after {
@@ -125,53 +138,84 @@ body {
   font-size: 15px; }
 
 /* gallery */
-#gallery .layers {
-  min-height: 260px; }
-  #gallery .layers [class*="layer"] {
-    height: 250px;
-    margin: 5px;
-    display: inline-flex;
-    align-items: flex-end;
-    transition-duration: 2s; }
-    #gallery .layers [class*="layer"] .topic {
-      position: relative;
-      font-size: 32px;
-      font-weight: 700;
-      letter-spacing: 5px;
-      margin-left: 40px;
-      margin-bottom: 30px;
-      margin-right: 40px;
-      animation: myanim1 2s;
-      animation-fill-mode: forwards; }
-  #gallery .layers .layer1 {
-    background: url("../img/Layer1.png") center/cover;
-    flex: 1; }
-  #gallery .layers .layer2 {
-    background: url("../img/Layer2.png") center/cover;
-    flex: 2; }
-  #gallery .layers .layer3 {
-    background: url("../img/Layer3.png") center/cover;
-    flex: 1; }
-  #gallery .layers .layer4 {
-    background: url("../img/Layer4.png") center/cover;
-    flex: 1; }
-  #gallery .layers .layer5 {
-    background: url("../img/Layer5.png") center/cover;
-    flex: 2; }
-  #gallery .layers .layer6 {
-    background: url("../img/Layer2.png") center/cover;
-    flex: 1; }
-  #gallery .layers [class*="layer"]:hover .topic {
-    animation: myanim0 2s;
-    animation-fill-mode: forwards; }
-  #gallery .layers [class*="layer"]:hover {
-    flex: 3; }
+#gallery .layers [class*="layer"] {
+  height: 250px;
+  margin: 5px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  transition-duration: 2s; }
+  #gallery .layers [class*="layer"] .topic {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+    margin-right: 40px;
+    -webkit-animation: myanim1 2s;
+            animation: myanim1 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
+#gallery .layers .layer1 {
+  background: url("../img/Layer1.png") center/cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+#gallery .layers .layer2 {
+  background: url("../img/Layer2.png") center/cover;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2; }
+#gallery .layers .layer3 {
+  background: url("../img/Layer3.png") center/cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+#gallery .layers .layer4 {
+  background: url("../img/Layer4.png") center/cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+#gallery .layers .layer5 {
+  background: url("../img/Layer5.png") center/cover;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2; }
+#gallery .layers .layer6 {
+  background: url("../img/Layer2.png") center/cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+#gallery .layers [class*="layer"]:hover .topic {
+  -webkit-animation: myanim0 2s;
+          animation: myanim0 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+#gallery .layers [class*="layer"]:hover {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3; }
+
+@-webkit-keyframes myanim0 {
+  from {
+    bottom: 0; }
+  to {
+    bottom: 150px; } }
 
 @keyframes myanim0 {
   from {
     bottom: 0; }
   to {
     bottom: 150px; } }
+@-webkit-keyframes myanim1 {
+  from {
+    bottom: 150px; }
+  to {
+    bottom: 0; } }
 @keyframes myanim1 {
   from {
     bottom: 150px; }
@@ -214,7 +258,14 @@ footer .container {
   .btn-up {
     right: 15px;
     bottom: 25px;
-    animation: myanim4 1s 1; }
+    -webkit-animation: myanim4 1s 1;
+            animation: myanim4 1s 1; }
+
+  @-webkit-keyframes myanim4 {
+    from {
+      bottom: 0; }
+    to {
+      bottom: 25px; } }
 
   @keyframes myanim4 {
     from {
@@ -264,7 +315,6 @@ footer .container {
 
   /* gallery */
   #gallery .layers [class*="layer"] {
-    width: 100%;
     margin: 5px 15px; }
     #gallery .layers [class*="layer"] .topic {
       font-size: 23px; }
@@ -305,16 +355,6 @@ footer .container {
   .jumbotron .scroll-container {
     padding-top: 80px; }
 
-  /* what we do */
-  #whatWeDo h3 {
-    font-size: 23px; }
-  #whatWeDo p {
-    padding-right: 25px;
-    padding-left: 25px;
-    font-size: 20px;
-    line-height: 35px;
-    font-weight: 400; }
-
   /* service */
   #services .myborder h2 {
     width: 666px;
@@ -325,21 +365,36 @@ footer .container {
     width: 158px;
     bottom: 12px; }
 
+  /* what we do */
+  #whatWeDo h3 {
+    font-size: 23px; }
+  #whatWeDo p {
+    padding-right: 25px;
+    padding-left: 25px;
+    font-size: 20px;
+    line-height: 35px;
+    font-weight: 400; }
+
   /* gallery */
   #gallery .layers [class*="layer"] {
-    width: 46%; }
-  #gallery .layers .layer1, #gallery .layers .layer3, #gallery .layers .layer5 {
-    margin-left: 15px; }
-  #gallery .layers .layer2, #gallery .layers .layer4, #gallery .layers .layer6 {
-    margin-right: 15px; }
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: 245px; }
+    #gallery .layers [class*="layer"] .topic {
+      font-size: 23px; }
 
   /* contact us */
   #contactUs .container .mybtn {
     width: 350px; } }
 @media (max-width: 1200px) {
   .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center; }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
 
   br {
     display: none; }
@@ -353,14 +408,22 @@ footer .container {
 
   /* jumbotron */
   .jumbotron {
-    justify-content: center; }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     .jumbotron .container {
       display: block; }
     .jumbotron .scroll-container .fa {
       position: relative;
       font-size: 50px;
       color: #fff;
-      animation: myanim2 1.5s infinite; } }
+      -webkit-animation: myanim2 1.5s infinite;
+              animation: myanim2 1.5s infinite; } }
+@-webkit-keyframes myanim2 {
+  from {
+    top: 0; }
+  to {
+    top: 15px; } }
 @keyframes myanim2 {
   from {
     top: 0; }
@@ -402,10 +465,20 @@ footer .container {
       padding-left: 80px;
       font-size: 22px;
       line-height: 30px; }
-    .jumbotron .container .scroll-container {
-      padding-top: 250px; }
-      .jumbotron .container .scroll-container .fa {
-        font-size: 80px; }
+  .jumbotron .scroll-container {
+    padding-top: 45px; }
+    .jumbotron .scroll-container .fa {
+      font-size: 80px; }
+
+  /* service */
+  #services .myborder h2 {
+    width: 796px;
+    top: -20px;
+    left: 0; }
+  #services .myborder h2:before,
+  #services .myborder h2:after {
+    width: 198px;
+    bottom: 26px; }
 
   /* what we do */
   #whatWeDo h3 {
@@ -417,15 +490,11 @@ footer .container {
     line-height: 35px;
     font-weight: 400; }
 
-  /* service */
-  #services .myborder h2 {
-    width: 796px;
-    top: -20px;
-    left: 0; }
-  #services .myborder h2:before,
-  #services .myborder h2:after {
-    width: 198px;
-    bottom: 26px; }
+  /* gallery */
+  #gallery .layers [class*="layer"] {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
 
   /* contact us */
   #contactUs .container .mybtn {
