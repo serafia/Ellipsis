@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
 
+
+$btn-color: #39393a;
 body {
 	font-family: 'Lato', sans-serif;
 	overflow-x: hidden;
@@ -41,8 +43,8 @@ body {
 	bottom: 50px;
 	right: 50px;
 	text-align: center;
-	border: 1px solid #39393a;
-	background-color: #39393a;
+	border: 1px solid $btn-color;
+	background-color: $btn-color;
 	color: #fff;
 	font-size: 20px;
 	padding-top: 3px;
@@ -160,8 +162,7 @@ body {
 /* gallery */
 
 #gallery {
-	.layers {
-		min-height: 260px; 	
+	.layers { 	
 		[class*="layer"] {
 			height: 250px;
 			margin: 5px;
@@ -237,7 +238,7 @@ body {
 			margin-bottom: 50px;
 			border-radius: 0;
 			letter-spacing: 2px;
-			background-color: #39393a;
+			background-color: $btn-color;
 			border: none;
 			color: #fff;
 			transition: .3s;
@@ -354,7 +355,6 @@ footer {
 	#gallery {
 		.layers {
 			[class*="layer"] {
-				width: 100%;
 				margin: 5px 15px;
 				.topic {
 				font-size: 23px;
@@ -424,22 +424,6 @@ footer {
 			padding-top: 80px;
 		}
 	}
-	
-
-	/* what we do */
-
-	#whatWeDo {
-		h3 {
-			font-size: 23px;
-		}
-		p {
-			padding-right: 25px; 
-			padding-left: 25px;
-			font-size: 20px;
-			line-height: 35px;
-			font-weight: 400;
-		}
-	}
 
 	/* service */
 
@@ -458,20 +442,34 @@ footer {
 		}
 	}
 
+	/* what we do */
+
+	#whatWeDo {
+		h3 {
+			font-size: 23px;
+		}
+		p {
+			padding-right: 25px; 
+			padding-left: 25px;
+			font-size: 20px;
+			line-height: 35px;
+			font-weight: 400;
+		}
+	}
+
 	/* gallery */
 
 	#gallery {
 		.layers {
 			[class*="layer"] {
-				width: 46%;
-			}
-			.layer1, .layer3, .layer5 {
-			margin-left: 15px;
-			}
-			.layer2, .layer4, .layer6 {
-			margin-right: 15px;
+			flex: 1;
+			width: 245px;
+				.topic {
+				font-size: 23px;
+				}
 			}
 		}
+		
 	}
 
 	/* contact us */
@@ -572,11 +570,29 @@ footer {
 				font-size: 22px;
 				line-height: 30px;
 			}
-			.scroll-container {
-				padding-top: 250px;
-				.fa {
-					font-size: 80px;
-				}
+		}
+		.scroll-container {
+			padding-top: 45px;
+			.fa {
+				font-size: 80px;
+			}
+			
+		}
+	}
+
+	/* service */
+
+	#services {
+		.myborder {
+			h2 {
+				width: 796px;
+				top: -20px;
+				left: 0;
+			}
+			h2:before,
+			h2:after {
+				width: 198px;
+				bottom: 26px;
 			}
 		}
 	}
@@ -596,20 +612,16 @@ footer {
 		}
 	}
 
-	/* service */
+	
 
-	#services {
-		.myborder {
-			h2 {
-				width: 796px;
-				top: -20px;
-				left: 0;
+	/* gallery */
+
+	#gallery {
+		.layers {
+			[class*="layer"] {
+				flex: 1;
 			}
-			h2:before,
-			h2:after {
-				width: 198px;
-				bottom: 26px;
-			}
+			
 		}
 	}
 
