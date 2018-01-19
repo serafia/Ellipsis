@@ -134,7 +134,35 @@
 					<p>Planning and development is iterative. Because we are constantly coding 
 						<br> and testing, the products we build are always ready to go live. This iterative process 
 						<br> allows for changes as business requirements evolve.</p>
-					<a href="#"><button class="btn text-uppercase mybtn">contact us</button></a>
+					<button class="btn text-uppercase mybtn" data-toggle="modal" data-target="#contactUsModal">contact us</button>
+					<div class="modal fade" id="contactUsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+							       	<h5 class="modal-title" id="exampleModalLabel">Contact Us</h5>
+							        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							          	<span aria-hidden="true">&times;</span>
+							        </button>
+							    </div>
+							    <div class="modal-body">
+							        <form>
+							          	<div class="form-group text-left">
+							            	<label for="email-name" class="col-form-label text-left">Your e-mail:</label>
+							            	<input type="email" class="form-control" id="email-name">
+							          	</div>
+							          	<div class="form-group text-left">
+							            	<label for="message-text" class="col-form-label text-left">Message:</label>
+							            	<textarea class="form-control" id="message-text"></textarea>
+							          	</div>
+							        </form>
+							    </div>
+							    <div class="modal-footer">
+							        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							        <button type="button" class="btn btn-primary">Send message</button>
+							    </div>
+							</div>
+						</div>
+					</div>
 				</div>				
 			</div>
 		</section>
