@@ -20,7 +20,7 @@ function showBtnUp() {
 			$('#btnUp').removeClass('d-none');
 		}
 	}	
-}
+};
 
 $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
@@ -36,5 +36,7 @@ $('a[href*="#"]:not([href="#"])').click(function() {
         }
     }
 });
+
+
 
 
