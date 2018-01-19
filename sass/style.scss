@@ -183,7 +183,6 @@ body {
 				letter-spacing: 5px;
 				margin-left: 40px;
 				margin-bottom: 30px;
-				margin-right: 40px;
 				animation: myanim1 2s;
 				animation-fill-mode: forwards;
 				.gallery-text {
@@ -235,6 +234,7 @@ body {
 			display: inline-block;
 			animation: myanim4 2s;
 			animation-fill-mode: forwards;
+			animation-delay: .5s;
 			
 		}	
 	}
@@ -386,7 +386,9 @@ footer {
 			[class*="layer"] {
 				margin: 5px 15px;
 				.topic {
-				font-size: 23px;
+					width: 200px;
+					font-size: 23px;
+					
 				}
 			}
 		}
@@ -490,11 +492,14 @@ footer {
 
 	#gallery {
 		.layers {
+		flex-wrap: nowrap;
 			[class*="layer"] {
-			flex: 1;
-			width: 245px;
+				flex: 1;
+				max-width: 245px;
+				min-width: 0;
 				.topic {
 				font-size: 23px;
+				margin-left: 20px;
 				}
 			}
 		}
@@ -548,12 +553,30 @@ footer {
 			}
 		}
 	}
-	
+	/* gallery */
+
+	#gallery {
+		.layers {
+			[class*="layer"] {
+				.topic {
+					width: 200px;
+					.gallery-text {
+						bottom: 0;
+						display: inline-block;
+						opacity: 1;
+					}
+				}
+			}
+		}
+		
+	}
 }
 @keyframes myanim2 {
 	from { top: 0;}
 	to { top: 15px;}
 }
+
+
 
 @media(min-width: 993px) and (max-width: 1200px) {
 	.myborder {
@@ -649,6 +672,13 @@ footer {
 		.layers {
 			[class*="layer"] {
 				flex: 1;
+				min-width: 305px;
+				max-width: 320px;
+				.topic {
+					.gallery-text {
+						font-size: 17px;
+					}
+				}
 			}
 			
 		}
