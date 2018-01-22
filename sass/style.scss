@@ -52,6 +52,7 @@ body {
 	box-shadow: 2px 2px 5px #888;
 	transition: .3s;
 	animation: myanim3 1s 1;
+	z-index: 9999;
 }
 .btn-up:hover {
 	background-color: #000;
@@ -237,6 +238,9 @@ body {
 			animation-delay: .5s;
 			
 		}	
+		[class*="layer"]:focus {
+			animation: none;
+		}
 	}
 }
 @keyframes myanim0 {
@@ -520,6 +524,8 @@ footer {
 }
 
 @media (max-width: 1200px) {
+	
+
 	.container {
 		display: flex;
 		justify-content: center;
@@ -535,6 +541,9 @@ footer {
 			padding-left: 25px;
 			line-height: 30px;
 		}
+	}
+	.btn-up:focus {
+		background-color: $btn-color;
 	}
 	 
 	/* jumbotron */
@@ -560,6 +569,7 @@ footer {
 			[class*="layer"] {
 				.topic {
 					width: 200px;
+					animation: none;
 					.gallery-text {
 						bottom: 0;
 						display: inline-block;
@@ -567,6 +577,13 @@ footer {
 					}
 				}
 			}
+			[class*="layer"]:hover .topic {
+				animation: none;
+			}	
+			[class*="layer"]:hover .topic .gallery-text {
+				animation: none;
+				
+			}	
 		}
 		
 	}
@@ -606,7 +623,7 @@ footer {
 
 	.jumbotron {
 		.container {
-			padding-top: 250px;
+			padding: 80px 15px;
 			img {
 				width: 70px;
 				height: 74px;
