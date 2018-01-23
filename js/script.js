@@ -5,7 +5,7 @@ $(window).scroll(function() {
 function showBtnUp() {
 	var scrollPosition = $(document).scrollTop();
 	//console.log(scrollPosition);
-	var windowWidth = $(window).innerWidth;
+	var windowWidth = $(window).innerWidth();
 	//console.log(windowWidth);
 	if(windowWidth > 767) {
 		if(scrollPosition < 1000) {
