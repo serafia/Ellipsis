@@ -22,7 +22,7 @@
     "glob-run": "^0.1.6",
     "hoek": "^5.0.3",
     "html-validator-cli": "^3.2.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "mime": "^2.3.1",
     "nu-html-checker": "^0.1.0",
     "onchange": "^3.3.0",
